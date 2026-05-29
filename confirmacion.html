@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AquaNova | Compra Exitosa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="confirmacion">
+    <header class="HPro2">
+        <a href="index.html" class="aSUBI">
+            <img src="AquaLogo.png" alt="Logo">
+            <h1>AquaNova</h1>
+        </a>
+        <nav class="NPro2">
+            <div class="user-menu" id="userMenu">
+                <span class="hello" id="userGreeting">Hola, Invitado</span>
+                <a href="login.html" id="authLink">Iniciar sesión</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito (<span
+                            id="cartCount">0</span>)</a></li>
+                <li><a href="mis-pedidos.html"><i class="fa-solid fa-box"></i> Mis pedidos</a></li>
+                <li><a href="#">Contacto ▼</a>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="margin-top: 100px;">
+        <div class="venta" id="confirmacionContent">
+            <h2><i class="fa-solid fa-square-check" style="color: #00ff88;"></i> ¡Compra realizada!</h2>
+            <p>Pedido #<span id="pedidoNumero"></span></p>
+            <p>Total: $<span id="pedidoTotal"></span></p>
+            <h3>Productos:</h3>
+            <ul id="productosLista"></ul>
+            <h3>📦 Estado: En proceso</h3>
+        </div>
+        <a class="SC" href="productos.html">Seguir comprando</a>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

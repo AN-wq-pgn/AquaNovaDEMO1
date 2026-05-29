@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AquaNova | Iniciar Sesión</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="login-body">
+    <div class="login-form">
+        <h2 style="text-align:center; margin-bottom:20px;">AquaNova</h2>
+        <input type="email" id="loginEmail" placeholder="Correo electrónico" required class="login-input">
+        <input type="password" id="loginPassword" placeholder="Contraseña" required class="login-input">
+        <button id="loginBtn" class="login-button">Iniciar sesión</button>
+        <a href="registro.html" class="login-link">Crear cuenta</a>
+        <a href="productos.html" class="login-link">Continuar sin cuenta</a>
+        <div id="loginError" style="color:red; text-align:center; margin-top:10px; display:none;">Correo o contraseña
+            incorrectos</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

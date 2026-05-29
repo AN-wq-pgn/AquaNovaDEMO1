@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AquaNova | Registrarse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="body-registro">
+    <form class="form-registro" id="registroForm">
+        <h2 class="titulo-registro">Crear cuenta</h2>
+        <input type="text" id="regEmpresa" placeholder="Nombre de la empresa" required class="input-reg">
+        <input type="email" id="regEmail" placeholder="Correo electrónico" required class="input-reg">
+        <input type="password" id="regPassword" placeholder="Contraseña" required class="input-reg">
+        <input type="tel" id="regTelefono" placeholder="Teléfono" required class="input-reg">
+        <input type="text" id="regDireccion" placeholder="Dirección" required class="input-reg">
+        <input type="text" id="regRfc" placeholder="RFC" required class="input-reg">
+        <button type="submit" class="btn-reg">Registrarse</button>
+        <a href="login.html" class="login-link" style="text-align:center;">¿Ya tienes cuenta? Inicia sesión</a>
+        <div id="regError" style="color:red; text-align:center; display:none;"></div>
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,992 @@
+:root {
+    ---primary: rgb(195, 227, 255);
+    ---secundary: black;
+    ---tertiary: rgb(8, 52, 114);
+    ---four: rgb(40, 84, 187);
+    ---five: rgb(15, 23, 42);
+    ---six: rgb(226, 232, 240);
+    ---seven: transparent;
+    ---eight: #2ec4b6;
+    ---nine: rgb(169, 169, 255);
+    ---saludo: #1C398E;
+    ---background-body: linear-gradient(135deg, #4facfe, #00f2fe);
+    --gradiente-targets: linear-gradient(to right, rgba(120, 120, 247, 0.911), #ffe7e7);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(---background-body);
+    min-height: 100vh;
+}
+
+/* ========== HEADER ========== */
+.HPro2,
+.HsubI {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(---six);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.aSUBI {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(---five);
+}
+
+.aSUBI img {
+    width: 35px;
+}
+
+.aSUBI h1 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.NPro2 ul,
+.NsubI ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+.NPro2 ul li,
+.NsubI ul li {
+    position: relative;
+}
+
+.NPro2 ul li ul,
+.NsubI ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    background-color: var(---six);
+    padding: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+}
+
+.NPro2 ul li:hover ul,
+.NsubI ul li:hover ul {
+    display: flex;
+}
+
+.NPro2 a,
+.NsubI a {
+    text-decoration: none;
+    color: var(---five);
+    padding: 8px 12px;
+    display: block;
+    white-space: nowrap;
+}
+
+.user-menu {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.hello {
+    color: var(---saludo);
+    font-size: 0.9rem;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* ========== INDEX ========== */
+.primary {
+    background: var(---four);
+    color: white;
+}
+
+.principal {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle, rgba(0, 174, 255, 0.2), transparent);
+    text-align: center;
+    padding: 20px;
+}
+
+.tituloF {
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+#Logo {
+    width: 100px;
+    margin: 20px 0;
+}
+
+.aINDEX p {
+    background: #00aeff;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.aINDEX p:hover {
+    background: #008ecf;
+    transform: scale(1.1);
+}
+
+.targets {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #0a1f2c, #0f3d5e);
+    flex-wrap: wrap;
+}
+
+.card {
+    background: linear-gradient(145deg, #0f3d5e, #155a7a);
+    border-radius: 20px;
+    padding: 25px;
+    width: 280px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: linear-gradient(145deg, #00aeff, #0077b6);
+}
+
+.imgCard {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+/* ========== PRODUCTOS ========== */
+.pro2 {
+    background: #050f17;
+    color: white;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 100px 30px 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cardPro {
+    perspective: 1000px;
+    height: 380px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+.inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: 0.6s;
+}
+
+.cardPro:hover .inner {
+    transform: rotateY(180deg);
+}
+
+.front,
+.back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    padding: 15px;
+}
+
+.front {
+    background: #1C398E;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.front img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.front h3 {
+    text-align: center;
+}
+
+.back {
+    background: #132c6b;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-y: auto;
+}
+
+.back p {
+    margin: 8px 0;
+    font-size: 0.9rem;
+}
+
+.precio {
+    color: #00ff88;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+button,
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background: #00ff88;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+button:hover,
+.add-to-cart:hover {
+    background: #00cc6a;
+    transform: scale(1.02);
+}
+
+/* ========== CARRITO ========== */
+.carrito {
+    background: var(---background-body);
+    min-height: 100vh;
+}
+
+.contenedor-carrito {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+.card {
+    perspective: 1000px;
+    height: 350px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.card .inner {
+    height: 350px;
+}
+
+.card .front,
+.card .back {
+    padding: 15px;
+}
+
+.card .back p {
+    margin: 10px 0;
+}
+
+.btn-cantidad {
+    width: 35px;
+    padding: 5px;
+    margin: 0 5px;
+    display: inline-block;
+}
+
+.btn-eliminar {
+    background: #ff4d4d;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-eliminar:hover {
+    background: #cc0000;
+}
+
+.carrito-vacio,
+.sin-pedidos {
+    text-align: center;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+}
+
+.carrito-vacio i,
+.sin-pedidos i {
+    font-size: 4rem;
+    margin-bottom: 20px;
+    color: #00ff88;
+}
+
+.total-carrito {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.btn-finalizar {
+    width: 250px;
+    margin: 20px auto;
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+.Seguir,
+.SC,
+.MP {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #1C398E;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.Seguir:hover,
+.SC:hover,
+.MP:hover {
+    background: #00ff88;
+    color: black;
+    transform: scale(1.05);
+}
+
+/* ========== PEDIDOS ========== */
+.mis_pedidos {
+    background: var(---background-body);
+    min-height: 100vh;
+}
+
+.pedidos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+    padding: 100px 20px 50px;
+}
+
+.pedido-card {
+    background: #1C398E;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    color: white;
+}
+
+.pedido-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.btn-detalle {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    background: #00ff88;
+    color: black;
+    text-decoration: none;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.estado-En-proceso {
+    color: #00ff88;
+}
+
+/* ========== DETALLE PEDIDO ========== */
+.VerPedido {
+    background: var(---background-body);
+    min-height: 100vh;
+}
+
+.Detalle {
+    text-align: center;
+    margin: 100px 0 30px;
+    color: #00ff88;
+}
+
+.pedido {
+    max-width: 650px;
+    margin: auto;
+    list-style: none;
+    padding: 0 20px;
+}
+
+.pedido li {
+    background: linear-gradient(145deg, #1C398E, #132c6b);
+    margin-bottom: 12px;
+    padding: 15px;
+    border-radius: 12px;
+    color: white;
+}
+
+/* ========== CONFIRMACIÓN ========== */
+.confirmacion {
+    background: var(---background-body);
+    min-height: 100vh;
+}
+
+.venta {
+    max-width: 500px;
+    margin: 100px auto 30px;
+    background: #0f1e4d;
+    border-radius: 20px;
+    padding: 25px;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+    border: 2px dashed #00ff88;
+}
+
+.venta ul {
+    list-style: none;
+    padding: 0;
+}
+
+.venta li {
+    background: #132c6b;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+/* ========== LOGIN / REGISTRO ========== */
+.login-body,
+.body-registro {
+    margin: 0;
+    height: 100vh;
+    background: var(---background-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form,
+.form-registro {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 350px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.login-input,
+.input-reg {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-button,
+.btn-reg {
+    width: 100%;
+    padding: 12px;
+    background: #4facfe;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #4facfe;
+    text-decoration: none;
+}
+
+/* ========== SOBRE NOSOTROS ========== */
+.subI {
+    background: white;
+}
+
+.Modulo1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 40px 50px;
+    background: #2f5bb7;
+    color: white;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.contenido {
+    flex: 1;
+    min-width: 250px;
+}
+
+.contenido p {
+    text-align: justify;
+}
+
+.asideSubI img {
+    max-width: 400px;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.targetsSubI {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 50px 20px;
+}
+
+.patent {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.patent h2 {
+    color: #1C398E;
+}
+
+.cardSubI1,
+.cardSubI2,
+.cardSubI3 {
+    background: rgb(214, 234, 252);
+    padding: 20px;
+    width: 300px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cardSubI1 h1,
+.cardSubI2 h1,
+.cardSubI3 h1 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #1C398E;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: var(---five);
+    padding: 40px 20px;
+    color: var(---six);
+}
+
+.Information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerLogo {
+    flex: 1;
+    min-width: 250px;
+}
+
+.logoRow {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logoRow img {
+    width: 50px;
+}
+
+.redes {
+    list-style: none;
+}
+
+.redes li {
+    margin: 10px 0;
+}
+
+.redes a {
+    color: var(---six);
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.redes a:hover {
+    color: #00ff88;
+}
+
+/* ========== MEDIA QUERIES ========== */
+
+/* Tablets (hasta 1024px) */
+@media (max-width: 1024px) {
+
+    .HPro2,
+    .HsubI {
+        padding: 10px 15px;
+    }
+
+    .NPro2 ul,
+    .NsubI ul {
+        gap: 8px;
+    }
+
+    .NPro2 a,
+    .NsubI a {
+        padding: 6px 8px;
+        font-size: 0.85rem;
+    }
+
+    .hello {
+        font-size: 0.8rem;
+    }
+}
+
+/* Tablets pequeñas (hasta 768px) */
+@media (max-width: 768px) {
+
+    .HPro2,
+    .HsubI {
+        flex-direction: column;
+        padding: 10px;
+        position: relative;
+    }
+
+    .aSUBI {
+        margin-bottom: 10px;
+    }
+
+    .user-menu {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .NPro2 ul,
+    .NsubI ul {
+        justify-content: center;
+    }
+
+    /* PRODUCTOS - corrección tarjetas delgadas */
+    .contenedor {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 80px 20px 40px;
+    }
+
+    .cardPro {
+        max-width: 320px;
+        margin: 0 auto;
+        height: auto;
+        min-height: 380px;
+    }
+
+    .inner {
+        height: 380px;
+    }
+
+    /* CARRITO */
+    .contenedor-carrito {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 100px 20px 40px;
+    }
+
+    .card {
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    /* PEDIDOS */
+    .pedidos-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 100px 20px 40px;
+    }
+
+    .pedido-card {
+        max-width: 320px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* SOBRE NOSOTROS */
+    .Modulo1 {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px 30px;
+    }
+
+    .contenido p {
+        text-align: center;
+    }
+
+    /* FOOTER */
+    .Information {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logoRow {
+        justify-content: center;
+    }
+}
+
+/* Móviles grandes (hasta 600px) */
+@media (max-width: 600px) {
+    .aSUBI h1 {
+        font-size: 1.2rem;
+    }
+
+    .aSUBI img {
+        width: 28px;
+    }
+
+    .hello {
+        font-size: 0.7rem;
+    }
+
+    .NPro2 a,
+    .NsubI a {
+        padding: 4px 8px;
+        font-size: 0.7rem;
+    }
+
+    /* PRODUCTOS */
+    .contenedor {
+        padding: 70px 15px 30px;
+        gap: 20px;
+    }
+
+    .cardPro {
+        max-width: 280px;
+        min-height: 360px;
+    }
+
+    .inner {
+        height: 360px;
+    }
+
+    .front img {
+        height: 150px;
+    }
+
+    .front h3,
+    .back h3 {
+        font-size: 0.95rem;
+    }
+
+    .back p {
+        font-size: 0.8rem;
+    }
+
+    .precio {
+        font-size: 1.1rem;
+    }
+
+    /* CARRITO */
+    .contenedor-carrito {
+        padding: 90px 15px 30px;
+    }
+
+    .card {
+        max-width: 260px;
+    }
+
+    .card .inner {
+        height: 340px;
+    }
+
+    .btn-cantidad {
+        width: 30px;
+        padding: 3px;
+    }
+
+    /* PEDIDOS */
+    .pedidos-grid {
+        padding: 90px 15px 30px;
+    }
+
+    .pedido-card {
+        max-width: 280px;
+    }
+
+    /* BOTONES */
+    .btn-finalizar {
+        width: 200px;
+        font-size: 1rem;
+    }
+
+    .Seguir,
+    .SC,
+    .MP {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* SOBRE NOSOTROS */
+    .Modulo1 {
+        padding: 70px 15px 25px;
+    }
+
+    .contenido h1 {
+        font-size: 1.5rem;
+    }
+
+    .patent h2 {
+        font-size: 1.3rem;
+    }
+
+    .cardSubI1,
+    .cardSubI2,
+    .cardSubI3 {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    /* CONFIRMACIÓN */
+    .venta {
+        margin: 110px 15px 20px;
+        padding: 20px;
+    }
+
+    .Detalle {
+        font-size: 1.2rem;
+        margin: 110px 0 20px;
+    }
+}
+
+/* Móviles pequeños (hasta 480px) */
+@media (max-width: 480px) {
+
+    .NPro2 a,
+    .NsubI a {
+        padding: 3px 6px;
+        font-size: 0.65rem;
+    }
+
+    .hello {
+        font-size: 0.65rem;
+    }
+
+    .user-menu {
+        gap: 8px;
+    }
+
+    .tituloF {
+        font-size: 1.8rem;
+    }
+
+    /* PRODUCTOS */
+    .cardPro {
+        max-width: 260px;
+        min-height: 350px;
+    }
+
+    .inner {
+        height: 350px;
+    }
+
+    .front img {
+        height: 130px;
+    }
+
+    .back {
+        padding: 12px;
+    }
+
+    button,
+    .add-to-cart {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape en móviles */
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .HPro2,
+    .HsubI {
+        position: relative;
+    }
+
+    .principal {
+        height: auto;
+        min-height: 100vh;
+        padding: 80px 20px;
+    }
+
+    .contenedor,
+    .contenedor-carrito {
+        margin-top: 20px;
+    }
+}
+
+/* Dispositivos táctiles (sin hover) */
+@media (hover: none) {
+    .cardPro .inner {
+        transform: none;
+    }
+
+    .cardPro .back {
+        position: relative;
+        transform: none;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .cardPro .front {
+        position: relative;
+    }
+
+    .cardPro {
+        height: auto;
+        perspective: none;
+    }
+
+    .inner {
+        transform-style: flat;
+    }
+
+    .cardPro:hover .inner {
+        transform: none;
+    }
+}

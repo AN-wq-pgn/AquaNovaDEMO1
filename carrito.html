@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AquaNova | Mi Carrito</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="carrito">
+    <header class="HPro2">
+        <a href="index.html" class="aSUBI">
+            <img src="AquaLogo.png" alt="Logo">
+            <h1>AquaNova</h1>
+        </a>
+        <nav class="NPro2">
+            <div class="user-menu" id="userMenu">
+                <span class="hello" id="userGreeting">Hola, Invitado</span>
+                <a href="login.html" id="authLink">Iniciar sesión</a>
+            </div>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i> Carrito (<span
+                            id="cartCount">0</span>)</a></li>
+                <li><a href="mis-pedidos.html"><i class="fa-solid fa-box"></i> Mis pedidos</a></li>
+                <li><a href="#">Contacto ▼</a>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">WhatsApp</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="margin-top: 100px; padding: 20px;">
+        <h2><i class="fa-solid fa-cart-shopping"></i> Tu carrito</h2>
+
+        <div id="carrito-contenedor" class="contenedor-carrito">
+            <!-- Los productos del carrito se cargarán aquí dinámicamente -->
+            <div class="carrito-vacio">
+                <i class="fa-solid fa-basket-shopping"></i>
+                <p>Tu carrito está vacío</p>
+                <a href="productos.html" class="Seguir">← Seguir comprando</a>
+            </div>
+        </div>
+
+        <div id="carrito-total" class="total-carrito" style="display: none;">
+            <h2>Total: $<span id="totalPagar">0</span></h2>
+            <button id="finalizarCompraBtn" class="btn-finalizar">Finalizar compra</button>
+            <a class="Seguir" href="productos.html">← Seguir comprando</a>
+        </div>
+    </main>
+
+    <footer>
+        <section class="Information">
+            <div class="footerLogo">
+                <div class="logoRow"><img src="AquaLogo.png" alt="">
+                    <h1>AquaNova</h1>
+                </div>
+                <p>Soluciones tecnológicas compactas y eficientes para el tratamiento de agua.</p>
+            </div>
+            <div class="Contact">
+                <h2>¡Contáctanos!</h2>
+                <ul class="redes">
+                    <li><i class="fab fa-facebook"></i> <a href="#">Facebook</a></li>
+                    <li><i class="fab fa-instagram"></i> <a href="#">Instagram</a></li>
+                    <li><i class="fab fa-whatsapp"></i> <a href="#">WhatsApp</a></li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
